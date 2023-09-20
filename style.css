@@ -117,10 +117,21 @@ body{
     background-color: rgba(0, 0, 0, 0.6);
     height: 100%;
     width: 100%;
-    display: none;
+    display: flex;
+    opacity: 0;
+    z-index: -999;
     justify-content: center;
     align-items: center;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
 }
+
+.game-modal.show{
+    opacity: 1;
+    z-index: 999;
+    pointer-events: auto;
+}
+
 .game-modal .content{
     background-color: white;
     max-width: 420px;
